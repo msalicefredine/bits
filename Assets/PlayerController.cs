@@ -3,16 +3,18 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	public int speed;
+	public float speed;
+	public Camera camera;
 
 	// Use this for initialization
 	void Start () {
+	
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		transform.Translate(Vector3.forward * speed * Time.deltaTime);
+		transform.Translate(camera.transform.forward * speed * Time.deltaTime);
 	}
 }
