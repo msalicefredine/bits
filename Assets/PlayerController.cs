@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.Translate(camera.transform.forward * speed * Time.deltaTime);
+		//transform.Translate(camera.transform.forward * speed * Time.deltaTime);
+		transform.position = transform.position + camera.transform.forward * speed * Time.deltaTime;
 	}
 }
