@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6052e301bf7453a96a44c39bca4269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: '"level1"'
+  level: level1
 --- !u!1001 &442723787
 Prefab:
   m_ObjectHideFlags: 0
@@ -224,7 +224,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11483714, guid: c2725838ba05147ffbdcc9965312266b, type: 2}
       propertyPath: level
-      value: '"level1"'
+      value: level1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2725838ba05147ffbdcc9965312266b, type: 2}
@@ -632,7 +632,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: dcd8898a5b8c54c59a1b18bcf72ebd37, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: dcd8898a5b8c54c59a1b18bcf72ebd37, type: 2}
       propertyPath: rect.y
@@ -2472,7 +2472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2084094952
 Transform:
   m_ObjectHideFlags: 0

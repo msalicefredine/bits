@@ -32,14 +32,16 @@ public class TeleportMainMenu : MonoBehaviour {
 		RaycastHit hit;
 		bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
 		GetComponent<Renderer>().material.color = isLookedAt ? Color.white : Color.blue;
+		if (isLookedAt) {
+			Application.LoadLevel (level);
+		}
 		if (Cardboard.SDK.CardboardTriggered && isLookedAt) {
 			// Teleport randomly.
-			Vector3 direction = Random.onUnitSphere;
+			/*Vector3 direction = Random.onUnitSphere;
 			direction.y = Mathf.Clamp(direction.y, 0.5f, 1f);
 			float distance = 2 * Random.value + 1.5f;
-			transform.localPosition = direction * distance;
+			transform.localPosition = direction * distance; */
 			// load level.
-			Application.LoadLevel(level);
 		}
 	}
 	
