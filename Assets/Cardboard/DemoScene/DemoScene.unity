@@ -692,8 +692,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   camera: {fileID: 648850986}
-  goodSound: {fileID: 576304370}
-  badSound: {fileID: 576304369}
 --- !u!23 &576304373
 Renderer:
   m_ObjectHideFlags: 0

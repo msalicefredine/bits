@@ -16,10 +16,11 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(Collider))]
-public class TeleportMainMenu : MonoBehaviour {
+public class Menu : MonoBehaviour {
 	private CardboardHead head;
 	private Vector3 startingPosition;
 	public string level;
+	private int i;
 	
 	void Start() {
 		head = Camera.main.GetComponent<StereoController>().Head;
@@ -33,7 +34,17 @@ public class TeleportMainMenu : MonoBehaviour {
 		bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
 		GetComponent<Renderer>().material.color = isLookedAt ? Color.white : Color.blue;
 		if (isLookedAt) {
-			Application.LoadLevel (level);
+			i++;
+			if (i > 100) {
+				Application.LoadLevel (level);
+			}
+			// StartCoroutine(MyLoadLevel(2f, level));
+			// play loading noise
+			// render loading bar
+		} else {
+			if (i > 0) {
+				i--;
+			}
 		}
 		if (Cardboard.SDK.CardboardTriggered && isLookedAt) {
 			// Teleport randomly.
@@ -43,6 +54,11 @@ public class TeleportMainMenu : MonoBehaviour {
 			transform.localPosition = direction * distance; */
 			// load level.
 		}
+	}
+
+	IEnumerator MyLoadLevel(float delay, string toLoad) {
+		yield return new WaitForSeconds (delay);
+		Application.LoadLevel (toLoad);
 	}
 	
 	void OnGUI() {
