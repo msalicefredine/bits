@@ -8,6 +8,14 @@ TagManager:
   - ChooseLevel
   - Bad
   - StartGame
+  - boundary
+  - first
+  - second
+  - third
+  - fourth
+  - fifth
+  - sixth
+  - seventh
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
