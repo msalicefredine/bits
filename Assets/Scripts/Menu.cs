@@ -42,9 +42,7 @@ public class Menu : MonoBehaviour {
 			// play loading noise
 			// render loading bar
 		} else {
-			if (i > 0) {
-				i--;
-			}
+			i = 0;
 		}
 		if (Cardboard.SDK.CardboardTriggered && isLookedAt) {
 			// Teleport randomly.
