@@ -25,9 +25,9 @@ public class RandomDistribute : MonoBehaviour {
 	}
 	
 	void RandomTransform(GameObject theObject) {
-		int x = Random.Range (1, 15);
-		int y = Random.Range (1, 15);
-		int z = Random.Range (1, 15);
+		int x = Random.Range (-80, 80);
+		int y = Random.Range (-90, 70);
+		int z = Random.Range (-80, 80);
 		
 		Vector3 trans = new Vector3 (x, y, z);
 		
