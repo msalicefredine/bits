@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 	public Rigidbody shipBody;
 	public GameObject particleObject;
 	private bool isAccelerating;
-	private float maxVelocity = 35;
+	private float maxVelocity = 150;
 	private int currentSequenceIndex;
 	private string currentSequence;
 
