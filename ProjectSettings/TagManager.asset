@@ -17,6 +17,12 @@ TagManager:
   - sixth
   - seventh
   - Notes
+  - noteSound
+  - wrong
+  - intro
+  - outro
+  - thruster
+  - collision
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

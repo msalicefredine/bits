@@ -17,11 +17,12 @@ public class RandomlyDistributeNotes : MonoBehaviour {
 		void Update () {
 			
 		}
-		
+
 		void RandomTransform(Transform eachTransform) {
-			int x = Random.Range (-45, 45);
-			int y = Random.Range (-45, 45);
-			int z = Random.Range (-45, 45);
+		int i = GetBoundaries ();
+		int x = Random.Range (-i, i);
+		int y = Random.Range (-i, i);
+		int z = Random.Range (-i, i);
 			
 			Vector3 trans = new Vector3 (x, y, z);
 			
@@ -29,4 +30,15 @@ public class RandomlyDistributeNotes : MonoBehaviour {
 			
 			
 		}
+
+	int GetBoundaries(){
+		if (GameState.currentLevel == 1)
+			return 10;
+		else if (GameState.currentLevel == 2)
+			return 10;
+		else if (GameState.currentLevel == 3 || GameState.currentLevel == 4)
+			return 10;
+		else
+			return 10;
+	}
 	}

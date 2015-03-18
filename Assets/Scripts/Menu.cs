@@ -36,7 +36,8 @@ public class Menu : MonoBehaviour {
 		if (isLookedAt) {
 			i++;
 			if (i > 100) {
-				Application.LoadLevel (level);
+				GameState.currentLevel++;
+				Application.LoadLevel (GameState.currentLevel);
 			}
 			// StartCoroutine(MyLoadLevel(2f, level));
 			// play loading noise

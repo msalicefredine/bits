@@ -13,11 +13,11 @@ GameObject:
   - 114: {fileID: 11434724}
   m_Layer: 0
   m_Name: thirdGlow
-  m_TagString: Untagged
+  m_TagString: third
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &134724
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,11 +46,11 @@ GameObject:
   - 114: {fileID: 11434726}
   m_Layer: 0
   m_Name: secondGlow
-  m_TagString: Untagged
+  m_TagString: second
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &134728
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,11 +64,11 @@ GameObject:
   - 114: {fileID: 11434728}
   m_Layer: 0
   m_Name: firstGlow
-  m_TagString: Untagged
+  m_TagString: first
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &434722
 Transform:
   m_ObjectHideFlags: 1
@@ -76,11 +76,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.58348942, y: 2.17311096, z: 1.4958235}
-  m_LocalScale: {x: .5, y: .5, z: 2.5}
+  m_LocalPosition: {x: 0, y: 0, z: -.720000029}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434724}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &434724
 Transform:
   m_ObjectHideFlags: 1
@@ -88,12 +88,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.5734892, y: .536889076, z: -.726823568}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 434728}
   - {fileID: 434726}
   - {fileID: 434722}
-  - {fileID: 434728}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &434726
@@ -103,11 +103,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.58348942, y: 2.17311096, z: 1.49582362}
-  m_LocalScale: {x: .5, y: .5, z: 2.5}
+  m_LocalPosition: {x: 0, y: 0, z: .579999983}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434724}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &434728
 Transform:
   m_ObjectHideFlags: 1
@@ -115,11 +115,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.57999992, y: 2.17000008, z: -.959999979}
-  m_LocalScale: {x: .5, y: .5, z: 2.5}
+  m_LocalPosition: {x: 0, y: 0, z: .579999983}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 434724}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!108 &10834724
 Light:
   m_ObjectHideFlags: 1
@@ -130,7 +130,7 @@ Light:
   serializedVersion: 3
   m_Type: 2
   m_Color: {r: .913725495, g: .623529434, b: .419607848, a: 1}
-  m_Intensity: .5
+  m_Intensity: .300000012
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -164,8 +164,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0, g: .56078434, b: .419607848, a: 1}
+  m_Intensity: .300000012
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -200,7 +200,7 @@ Light:
   serializedVersion: 3
   m_Type: 2
   m_Color: {r: .600000024, g: .0941176489, b: .800000012, a: 1}
-  m_Intensity: .5
+  m_Intensity: .300000012
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -237,7 +237,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axis: {fileID: 0}
-  rotationVector: {x: 1, y: 1, z: 0}
   rotationSpeed: 150
 --- !u!114 &11434726
 MonoBehaviour:
@@ -251,7 +250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axis: {fileID: 0}
-  rotationVector: {x: 0, y: 1, z: 0}
   rotationSpeed: 150
 --- !u!114 &11434728
 MonoBehaviour:
@@ -265,7 +263,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axis: {fileID: 0}
-  rotationVector: {x: 1, y: 0, z: 1}
   rotationSpeed: 150
 --- !u!122 &12234724
 Halo:

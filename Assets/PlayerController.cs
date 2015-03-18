@@ -10,12 +10,18 @@ public class PlayerController : MonoBehaviour {
 	public string[] sequence;
 	public Rigidbody shipBody;
 	public GameObject particleObject;
+
+
 	private bool isAccelerating;
-	private float maxVelocity = 150;
+	private float maxVelocity = 100;
 	private int currentSequenceIndex;
 	private string currentSequence;
 
+	public GameObject notePlayerObject;
+	public GameObject glowParentObject;
+	public GameObject noteParentObject;
 
+	private AudioSource notePlayer;
 	private AudioSource impact;
 	private AudioSource thrusters;
 	private AudioSource wrong;
@@ -25,37 +31,78 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		sequence = new string[10];
 		isAccelerating = false;
-		AudioSource[] audios = GetComponents<AudioSource>();
-		impact = audios [0];
-		thrusters = audios [1];
-		wrong = audios [2];
-		intro = audios [3];
-		outro = audios [4];
+		impact = GameObject.FindGameObjectWithTag ("collision").GetComponent<AudioSource> ();
+		thrusters = GameObject.FindGameObjectWithTag ("thruster").GetComponent<AudioSource> ();
+		wrong = GameObject.FindGameObjectWithTag ("wrong").GetComponent<AudioSource> ();
+		intro = GameObject.FindGameObjectWithTag ("intro").GetComponent<AudioSource> ();
+		outro = GameObject.FindGameObjectWithTag ("outro").GetComponent<AudioSource> ();
 		shipBody.maxAngularVelocity = 0;
+		SequenceBuilder ();
+		intro.Play ();
+		notePlayer = notePlayerObject.GetComponent<AudioSource> ();
+
+	}
+
+	void SequenceBuilder(){
 		currentSequenceIndex = 0;
 		sequence [0] = "first";
 		sequence [1] = "second";
 		sequence [2] = "third";
-		sequence [3] = "finished";
-		intro.Play ();
-
-
+		if (GameState.currentLevel == 1)
+			sequence [3] = "finished";
+		else if (GameState.currentLevel == 2) {
+			sequence [3] = "fourth";
+			sequence [4] = "finished";
+		}
+		else if(GameState.currentLevel == 3){
+			sequence [3] = "fourth";
+		sequence [4] = "fifth";
+		sequence [5] = "finished";
+		}
+		else if(GameState.currentLevel == 4){
+			sequence [3] = "fourth";
+		sequence [4] = "fifth";
+		sequence [5] = "sixth";
+		sequence [6] = "finished";
+		}
+		else if(GameState.currentLevel == 5){
+			sequence [3] = "fourth";
+		sequence [4] = "fifth";
+		sequence [5] = "sixth";
+		sequence [6] = "seventh";
+		sequence [7] = "finished";
+		}
 	}
 
 	void OnCollisionEnter(Collision collision) {
-		if (!collision.gameObject.tag.Equals ("boundary"))
+		if (!collision.gameObject.tag.Equals ("boundary") && !impact.isPlaying)
 		impact.Play ();
 		shipBody.velocity = Vector3.zero;
 		}
 
 	void OnTriggerEnter(Collider collision) {
 		if (collision.gameObject.tag.Equals (sequence [currentSequenceIndex])) {
-			collision.gameObject.GetComponent<AudioSource> ().Play ();
+			notePlayer.clip = collision.gameObject.GetComponent<AudioSource> ().clip;
+			notePlayer.Play ();
 			currentSequenceIndex++;
+			collision.gameObject.SetActive (false);
 
+			foreach (Transform item in glowParentObject.GetComponentInChildren<Transform>()) {
+				if (collision.gameObject.tag.Equals (item.tag))
+					item.gameObject.SetActive (true);
+			}
+		
 		} else {
-			wrong.Play ();
+			wrong.Play();
 			currentSequenceIndex = 0;
+			foreach (Transform item in glowParentObject.GetComponentInChildren<Transform>()) {
+		
+					item.gameObject.SetActive (false);
+			}
+			foreach (Transform item in noteParentObject.GetComponentInChildren<Transform>()) {
+				
+				item.gameObject.SetActive (true);
+			}
 		}
 	
 	}
@@ -64,7 +111,9 @@ public class PlayerController : MonoBehaviour {
 		if(!outro.isPlaying)
 		outro.Play ();
 		yield return new WaitForSeconds (5);
-		Application.LoadLevel ("level2");
+		GameState.currentLevel++;
+		SequenceBuilder ();
+		Application.LoadLevel (GameState.currentLevel);
 	}
 
 	// Update is called once per frame
@@ -74,8 +123,6 @@ public class PlayerController : MonoBehaviour {
 		}
 		if(shipBody.velocity.sqrMagnitude > maxVelocity)
 		{
-			//smoothness of the slowdown is controlled by the 0.99f, 
-			//0.5f is less smooth, 0.9999f is more smooth
 			shipBody.velocity *= 0.99f;
 		}
 
@@ -91,20 +138,9 @@ public class PlayerController : MonoBehaviour {
 			shipBody.drag = 0;
 			if(!thrusters.isPlaying)
 			thrusters.Play();
-			//transform.position = transform.position + camera.transform.forward * speed * Time.deltaTime;
 		} else {
 			isAccelerating = false;
 			shipBody.drag = 1f;
-			thrusters.Stop ();
 		}
 	}
-	/*
-	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.tag == "Good") {
-			goodSound.Play ();
-	}
-		if(other.gameObject.tag == "Bad") {
-			badSound.Play ();
-		}*/
-
 }

@@ -3,12 +3,12 @@ using System.Collections;
 
 public class rotation : MonoBehaviour {
 	public GameObject axis;
-	public Vector3 rotationVector;
+	private Vector3 rotationVector;
 	public int rotationSpeed;
 
 	// Use this for initialization
 	void Start () {
-		//rotationVector = new Vector3 (1, 0, 1);
+		rotationVector = new Vector3 (Random.Range (0f,1f), Random.Range (0f,1f), Random.Range (0f,1f));
 	}
 	
 	// Update is called once per frame
