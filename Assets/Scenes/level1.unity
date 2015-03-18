@@ -2715,6 +2715,10 @@ Prefab:
       propertyPath: test
       value: 
       objectReference: {fileID: 1528859978}
+    - target: {fileID: 11498474, guid: aa7f97ae3fc52b24dbd1fdf5ffb2085f, type: 2}
+      propertyPath: fadeToWhiteCanvas
+      value: 
+      objectReference: {fileID: 1528859978}
     m_RemovedComponents:
     - {fileID: 8298478, guid: aa7f97ae3fc52b24dbd1fdf5ffb2085f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: aa7f97ae3fc52b24dbd1fdf5ffb2085f, type: 2}
@@ -3878,7 +3882,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4c18b08a5ba499f92f0ad2f251a05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 0
   style:
     m_Name: 
     m_Normal:
@@ -3989,7 +3992,7 @@ MonoBehaviour:
   notePlayerObject: {fileID: 1596514461}
   glowParentObject: {fileID: 1596929853}
   noteParentObject: {fileID: 1350858306}
-  fadeToWhiteCanvas: {fileID: 0}
+  fadeToWhiteCanvas: {fileID: 1528859978}
 --- !u!65 &1526195249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4029,7 +4032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1528859975
 RectTransform:
   m_ObjectHideFlags: 0

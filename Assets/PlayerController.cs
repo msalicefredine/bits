@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 		SequenceBuilder ();
 		intro.Play ();
 		notePlayer = notePlayerObject.GetComponent<AudioSource> ();
-		//fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha = 0;
+		fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha = 0;
 	}
 
 	void SequenceBuilder(){
@@ -134,8 +134,15 @@ public class PlayerController : MonoBehaviour {
 		Application.LoadLevel (GameState.currentLevel);
 	}
 
+	void FadeIn ()
+	{
+		//if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha > 0)
+		//	fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha -= 0.004f;
+	}
+
 	// Update is called once per frame
 	void Update () {
+		FadeIn ();
 		if (sequence [currentSequenceIndex].Equals ("finished")) {
 			StartCoroutine(LevelIsFinished ());
 		}

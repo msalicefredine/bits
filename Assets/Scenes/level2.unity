@@ -1010,6 +1010,7 @@ GameObject:
   - 114: {fileID: 566668140}
   - 114: {fileID: 566668139}
   - 54: {fileID: 566668138}
+  - 114: {fileID: 566668137}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -1035,6 +1036,76 @@ Transform:
   - {fileID: 1594617428}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &566668137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 566668135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4c18b08a5ba499f92f0ad2f251a05b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  style:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
 --- !u!54 &566668138
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1086,6 +1157,7 @@ MonoBehaviour:
   notePlayerObject: {fileID: 1256031994}
   glowParentObject: {fileID: 1777096426}
   noteParentObject: {fileID: 1594390062}
+  fadeToWhiteCanvas: {fileID: 0}
 --- !u!65 &566668141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2597,6 +2669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d025af9947b10441b47ce1799f8a7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeToWhiteCanvas: {fileID: 0}
 --- !u!114 &1315175020
 MonoBehaviour:
   m_ObjectHideFlags: 0

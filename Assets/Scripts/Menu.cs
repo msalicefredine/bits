@@ -21,29 +21,39 @@ public class Menu : MonoBehaviour {
 	private Vector3 startingPosition;
 	public string level;
 	private int i;
+	private float r;
+	private float g;
+
 	
 	void Start() {
 		head = Camera.main.GetComponent<StereoController>().Head;
 		startingPosition = transform.localPosition;
 		CardboardGUI.IsGUIVisible = true;
 		CardboardGUI.onGUICallback += this.OnGUI;
+		r = 0.6f;
+		g = 0.6f;
 	}
 	
 	void Update() {
 		RaycastHit hit;
 		bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
-		GetComponent<Renderer>().material.color = isLookedAt ? Color.white : Color.blue;
 		if (isLookedAt) {
+			print ("looking at text");
 			i++;
+			if ((i % 10) == 0) {
+				GetComponent<Renderer>().material.color = new Color(r += 0.05f,g += 0.05f, 255);
+			}
+
 			if (i > 100) {
 				GameState.currentLevel++;
 				Application.LoadLevel (GameState.currentLevel);
 			}
-			// StartCoroutine(MyLoadLevel(2f, level));
-			// play loading noise
-			// render loading bar
-		} else {
+		} 
+		else {
 			i = 0;
+			r = 0.6f;
+			g = 0.6f;
+			GetComponent<Renderer>().material.color = new Color(0.5f, 0.5f, 1.0f);
 		}
 		if (Cardboard.SDK.CardboardTriggered && isLookedAt) {
 			// Teleport randomly.
@@ -53,11 +63,6 @@ public class Menu : MonoBehaviour {
 			transform.localPosition = direction * distance; */
 			// load level.
 		}
-	}
-
-	IEnumerator MyLoadLevel(float delay, string toLoad) {
-		yield return new WaitForSeconds (delay);
-		Application.LoadLevel (toLoad);
 	}
 	
 	void OnGUI() {
@@ -70,5 +75,12 @@ public class Menu : MonoBehaviour {
 		if (GUI.Button(new Rect(50, 110, 200, 50), "Recenter")) {
 			Cardboard.SDK.Recenter();
 		}
+
+	}
+
+	Color chooseColor(int index) {
+		float r = (index / 100);
+		float g = r;
+		return new Color (r, g, 255);
 	}
 }
