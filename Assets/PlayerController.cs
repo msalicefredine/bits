@@ -24,16 +24,15 @@ public class PlayerController : MonoBehaviour {
 	private AudioSource notePlayer;
 	private AudioSource impact;
 	private AudioSource thrusters;
-	private AudioSource wrong;
+
 	private AudioSource intro;
 	private AudioSource outro;
-	// Use this for initialization
+
 	void Start () {
 		sequence = new string[10];
 		isAccelerating = false;
 		impact = GameObject.FindGameObjectWithTag ("collision").GetComponent<AudioSource> ();
 		thrusters = GameObject.FindGameObjectWithTag ("thruster").GetComponent<AudioSource> ();
-		wrong = GameObject.FindGameObjectWithTag ("wrong").GetComponent<AudioSource> ();
 		intro = GameObject.FindGameObjectWithTag ("intro").GetComponent<AudioSource> ();
 		outro = GameObject.FindGameObjectWithTag ("outro").GetComponent<AudioSource> ();
 		shipBody.maxAngularVelocity = 0;
@@ -80,31 +79,44 @@ public class PlayerController : MonoBehaviour {
 		shipBody.velocity = Vector3.zero;
 		}
 
+	void WrongNote ()
+	{
+		currentSequenceIndex = 0;
+		foreach (Transform item in glowParentObject.GetComponentInChildren<Transform> ()) {
+			item.gameObject.SetActive (false);
+		}
+		foreach (Transform item in noteParentObject.GetComponentInChildren<Transform> ()) {
+			item.gameObject.SetActive (true);
+		}
+	}
+
 	void OnTriggerEnter(Collider collision) {
 		notePlayer.clip = collision.gameObject.GetComponent<AudioSource> ().clip;
 		notePlayer.Play ();
-		if (collision.gameObject.tag.Equals (sequence [currentSequenceIndex])) {
-			//notePlayer.clip = collision.gameObject.GetComponent<AudioSource> ().clip;
-			//notePlayer.Play ();
+		if(collision.gameObject.tag.Equals("parent")){
+			foreach (Transform unit in collision.transform){
+				if (unit.gameObject.tag.Equals (sequence [currentSequenceIndex])){
+					unit.parent.gameObject.SetActive(false);
+					currentSequenceIndex++;
+					foreach (Transform item in glowParentObject.GetComponentInChildren<Transform>()) {
+						if (unit.gameObject.tag.Equals (item.tag))
+							item.gameObject.SetActive (true);
+					}
+					return;
+				}
+			}
+			WrongNote ();
+		}
+		else if (collision.gameObject.tag.Equals (sequence [currentSequenceIndex])) {
 			currentSequenceIndex++;
 			collision.gameObject.SetActive (false);
-
 			foreach (Transform item in glowParentObject.GetComponentInChildren<Transform>()) {
 				if (collision.gameObject.tag.Equals (item.tag))
 					item.gameObject.SetActive (true);
 			}
 		
 		} else {
-			//wrong.Play();
-			currentSequenceIndex = 0;
-			foreach (Transform item in glowParentObject.GetComponentInChildren<Transform>()) {
-		
-					item.gameObject.SetActive (false);
-			}
-			foreach (Transform item in noteParentObject.GetComponentInChildren<Transform>()) {
-				
-				item.gameObject.SetActive (true);
-			}
+			WrongNote ();
 		}
 	
 	}

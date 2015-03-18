@@ -138,6 +138,22 @@ Prefab:
       propertyPath: m_Radius
       value: .400000006
       objectReference: {fileID: 0}
+    - target: {fileID: 182678, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
+      propertyPath: m_TagString
+      value: first
+      objectReference: {fileID: 0}
+    - target: {fileID: 182696, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
+      propertyPath: m_TagString
+      value: third
+      objectReference: {fileID: 0}
+    - target: {fileID: 182694, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 182692, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
   m_RootGameObject: {fileID: 1350858306}
@@ -444,7 +460,7 @@ GameObject:
   - 23: {fileID: 241327062}
   m_Layer: 0
   m_Name: Obj_000002
-  m_TagString: first
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -783,7 +799,7 @@ GameObject:
   - 23: {fileID: 519534197}
   m_Layer: 0
   m_Name: Obj_000002
-  m_TagString: first
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
