@@ -19,6 +19,8 @@ public class StaringAtTheSun : MonoBehaviour {
 
 		private CardboardHead head;
 		private Vector3 startingPosition;
+		public Canvas fadeToWhiteCanvas;
+		private float fadeCounter;
 		private int i;
 		
 		void Start() {
@@ -26,20 +28,26 @@ public class StaringAtTheSun : MonoBehaviour {
 			startingPosition = transform.localPosition;
 			CardboardGUI.IsGUIVisible = true;
 			CardboardGUI.onGUICallback += this.OnGUI;
+			fadeCounter = 0.0f;
 		}
 		
 		void Update() {
+
 			RaycastHit hit;
 			bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
 			GetComponent<Renderer>().material.color = isLookedAt ? Color.white : Color.blue;
 			if (isLookedAt) {
+			fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha += 0.005f;
 				i++;
+				
 				if (i > 100) {
 					Application.LoadLevel (GameState.currentLevel);
 				}
 			} else {
-				i = 0;
+			if (i > 0)
+				i--;
 			}
+
 		}
 		
 		IEnumerator MyLoadLevel(float delay, string toLoad) {

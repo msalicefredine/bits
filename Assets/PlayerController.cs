@@ -28,6 +28,10 @@ public class PlayerController : MonoBehaviour {
 	private AudioSource intro;
 	private AudioSource outro;
 
+	private int fadeCounter;
+	public Canvas fadeToWhiteCanvas;
+
+
 	void Start () {
 		sequence = new string[10];
 		isAccelerating = false;
@@ -39,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 		SequenceBuilder ();
 		intro.Play ();
 		notePlayer = notePlayerObject.GetComponent<AudioSource> ();
-
+		//fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha = 0;
 	}
 
 	void SequenceBuilder(){
