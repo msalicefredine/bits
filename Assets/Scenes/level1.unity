@@ -114,6 +114,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6482696, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482694, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482692, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13582696, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13582694, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13582692, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c1905a4bb86975458bf517f54870f2c, type: 2}
   m_RootGameObject: {fileID: 1350858306}
@@ -306,7 +330,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &220563457
 AudioSource:
@@ -2440,7 +2464,7 @@ MeshCollider:
   m_GameObject: {fileID: 747736628}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -2515,7 +2539,7 @@ MeshCollider:
   m_GameObject: {fileID: 761617480}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -2891,7 +2915,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &1170076700
 AudioSource:
@@ -3897,7 +3921,7 @@ MeshCollider:
   m_GameObject: {fileID: 1534433730}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -3947,7 +3971,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &1548349723
 AudioSource:

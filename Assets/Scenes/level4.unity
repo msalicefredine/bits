@@ -106,7 +106,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &7943520
 AudioSource:
@@ -425,7 +425,7 @@ MeshCollider:
   m_GameObject: {fileID: 177503288}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -1288,7 +1288,7 @@ MeshCollider:
   m_GameObject: {fileID: 445239581}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -1423,7 +1423,7 @@ MeshCollider:
   m_GameObject: {fileID: 456402758}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -1705,7 +1705,7 @@ MeshCollider:
   m_GameObject: {fileID: 558591997}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -2171,6 +2171,54 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 13506870, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13506868, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13506866, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13506864, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13506862, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13506860, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406870, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406868, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406866, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406864, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406862, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406860, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b4d3142f4560624ea3e035320c70b21, type: 2}
   m_RootGameObject: {fileID: 383364169}
@@ -2221,7 +2269,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &845187716
 AudioSource:
@@ -2488,7 +2536,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &954462440
 AudioSource:
@@ -3044,7 +3092,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &1113743520
 AudioSource:
@@ -3277,7 +3325,7 @@ MeshCollider:
   m_GameObject: {fileID: 1343222262}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -5104,7 +5152,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &1702573232
 AudioSource:
@@ -5452,7 +5500,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &1865513754
 AudioSource:
@@ -5680,7 +5728,7 @@ MeshCollider:
   m_GameObject: {fileID: 1880614412}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0

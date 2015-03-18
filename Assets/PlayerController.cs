@@ -81,9 +81,11 @@ public class PlayerController : MonoBehaviour {
 		}
 
 	void OnTriggerEnter(Collider collision) {
+		notePlayer.clip = collision.gameObject.GetComponent<AudioSource> ().clip;
+		notePlayer.Play ();
 		if (collision.gameObject.tag.Equals (sequence [currentSequenceIndex])) {
-			notePlayer.clip = collision.gameObject.GetComponent<AudioSource> ().clip;
-			notePlayer.Play ();
+			//notePlayer.clip = collision.gameObject.GetComponent<AudioSource> ().clip;
+			//notePlayer.Play ();
 			currentSequenceIndex++;
 			collision.gameObject.SetActive (false);
 
@@ -93,7 +95,7 @@ public class PlayerController : MonoBehaviour {
 			}
 		
 		} else {
-			wrong.Play();
+			//wrong.Play();
 			currentSequenceIndex = 0;
 			foreach (Transform item in glowParentObject.GetComponentInChildren<Transform>()) {
 		

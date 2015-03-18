@@ -758,7 +758,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &335347454
 AudioSource:
@@ -1404,7 +1404,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &621742121
 AudioSource:
@@ -1595,7 +1595,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &722671630
 AudioSource:
@@ -1742,7 +1742,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &745706681
 AudioSource:
@@ -1889,7 +1889,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &762792794
 AudioSource:
@@ -2030,7 +2030,7 @@ MeshCollider:
   m_GameObject: {fileID: 769177494}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -2403,7 +2403,7 @@ MeshCollider:
   m_GameObject: {fileID: 847445432}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -2726,7 +2726,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &1010169091
 AudioSource:
@@ -3095,6 +3095,62 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 13593064, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13593062, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13593060, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13593058, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13593056, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13593054, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 13593052, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Radius
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493062, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493060, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493056, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493054, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493064, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493058, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493052, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4606f662e1b4b844b0a35f990daec85, type: 2}
   m_RootGameObject: {fileID: 2344984}
@@ -3139,7 +3195,7 @@ MeshCollider:
   m_GameObject: {fileID: 1064191765}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -3345,7 +3401,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .200000003
+  m_Radius: .400000006
   m_Center: {x: .0500000007, y: 0, z: -.0299999993}
 --- !u!82 &1131095126
 AudioSource:
@@ -4423,7 +4479,7 @@ MeshCollider:
   m_GameObject: {fileID: 1560907216}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -5774,7 +5830,7 @@ MeshCollider:
   m_GameObject: {fileID: 1633572040}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -6001,7 +6057,7 @@ MeshCollider:
   m_GameObject: {fileID: 2000485882}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -6235,7 +6291,7 @@ MeshCollider:
   m_GameObject: {fileID: 2045951425}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
