@@ -33,12 +33,12 @@ public class RandomlyDistributeNotes : MonoBehaviour {
 
 	int GetBoundaries(){
 		if (GameState.currentLevel == 1)
-			return 10;
+			return 25;
 		else if (GameState.currentLevel == 2)
-			return 10;
+			return 30;
 		else if (GameState.currentLevel == 3 || GameState.currentLevel == 4)
-			return 10;
+			return 40;
 		else
-			return 10;
+			return 45;
 	}
 	}

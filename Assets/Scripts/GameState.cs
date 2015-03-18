@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GameState : MonoBehaviour {
 
-	public static int currentLevel = 5;
+	public static int currentLevel = 0;
 	public static int currentBestTime = 0;
 
 	// Use this for initialization

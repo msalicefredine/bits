@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 
 
 	private bool isAccelerating;
-	private float maxVelocity = 100;
+	private float maxVelocity = 150;
 	private int currentSequenceIndex;
 	private string currentSequence;
 
@@ -141,6 +141,7 @@ public class PlayerController : MonoBehaviour {
 		} else {
 			isAccelerating = false;
 			shipBody.drag = 1f;
+			thrusters.Stop();
 		}
 	}
 }

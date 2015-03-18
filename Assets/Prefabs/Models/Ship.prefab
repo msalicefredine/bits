@@ -1624,7 +1624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d2d2443fd0942a19a13b300564b673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   camera: {fileID: 2010094}
   text: {fileID: 0}
   sequence: []

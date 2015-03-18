@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d2d2443fd0942a19a13b300564b673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   camera: {fileID: 1268579752}
   text: {fileID: 0}
   sequence: []
@@ -877,6 +877,30 @@ Prefab:
       propertyPath: noteParentObject
       value: 
       objectReference: {fileID: 198414088}
+    - target: {fileID: 8220734, guid: aa59800c280034d2fb82ad2148912260, type: 2}
+      propertyPath: m_Volume
+      value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220724, guid: aa59800c280034d2fb82ad2148912260, type: 2}
+      propertyPath: m_Volume
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220732, guid: aa59800c280034d2fb82ad2148912260, type: 2}
+      propertyPath: m_Volume
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220726, guid: aa59800c280034d2fb82ad2148912260, type: 2}
+      propertyPath: m_Volume
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220730, guid: aa59800c280034d2fb82ad2148912260, type: 2}
+      propertyPath: m_Volume
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220722, guid: aa59800c280034d2fb82ad2148912260, type: 2}
+      propertyPath: m_Volume
+      value: .800000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa59800c280034d2fb82ad2148912260, type: 2}
   m_RootGameObject: {fileID: 31822930}
@@ -996,7 +1020,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 9ddcd7bd34723409eab9f55f2bddbba6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1849,7 +1873,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .800000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2260,7 +2284,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 639ccb03840c24354a3d35c599251082, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .600000024
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2672,7 +2696,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: dd5b09782b2634b978994eb057ad6b0a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3534,7 +3558,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 3c054a38c18094b68ae5959ad5e073eb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3737,7 +3761,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 2347d8b17e1514e6184c0727fc135f23, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .800000012
   m_Pitch: 1
   Loop: 1
   Mute: 0
