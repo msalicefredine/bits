@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 
 
 	private bool isAccelerating;
-	private float maxVelocity = 150;
+	private float maxVelocity = 100;
 	private int currentSequenceIndex;
 	private string currentSequence;
 

@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d2d2443fd0942a19a13b300564b673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 5
   camera: {fileID: 729263313}
   text: {fileID: 0}
   sequence: []
@@ -2634,6 +2634,10 @@ Prefab:
     - target: {fileID: 10815384, guid: 70778a222e570ff4684433f163b42b62, type: 2}
       propertyPath: m_Color.b
       value: .388235301
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415378, guid: 70778a222e570ff4684433f163b42b62, type: 2}
+      propertyPath: speed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 70778a222e570ff4684433f163b42b62, type: 2}

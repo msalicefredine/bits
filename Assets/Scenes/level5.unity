@@ -6862,6 +6862,10 @@ Prefab:
       propertyPath: m_Color.rgba
       value: 4285243369
       objectReference: {fileID: 0}
+    - target: {fileID: 11447536, guid: 07a4f1065c3059f4fad03714032902f9, type: 2}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 07a4f1065c3059f4fad03714032902f9, type: 2}
   m_RootGameObject: {fileID: 243733370}
