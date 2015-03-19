@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1196,7 +1196,7 @@ Transform:
   m_PrefabInternal: {fileID: 929910723}
   m_GameObject: {fileID: 566668135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.98999977, y: 2.71000004, z: -.555999994}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 2.5}
   m_Children:
   - {fileID: 544603759}
@@ -1778,15 +1778,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 441576, guid: 89cade93b82589d43acc31fc4f8694c2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.98999977
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 441576, guid: 89cade93b82589d43acc31fc4f8694c2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.71000004
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 441576, guid: 89cade93b82589d43acc31fc4f8694c2, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -.555999994
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 441576, guid: 89cade93b82589d43acc31fc4f8694c2, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1905,15 +1905,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 452240, guid: 2b02ae415592e7549a46c148a7567b32, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.5716095
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 452240, guid: 2b02ae415592e7549a46c148a7567b32, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.61241508
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 452240, guid: 2b02ae415592e7549a46c148a7567b32, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 9.7216301
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 452240, guid: 2b02ae415592e7549a46c148a7567b32, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4585,7 +4585,7 @@ Transform:
   m_PrefabInternal: {fileID: 990361841}
   m_GameObject: {fileID: 1594390062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.5716095, y: 2.61241508, z: 9.7216301}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2035507746}

@@ -25,7 +25,7 @@ public class TransitionScript : MonoBehaviour {
 
 	void runShip() {
 		// Ship blasts off: apply force and start particle stuff
-		ship.AddForce (Vector3.forward * speed, ForceMode.Acceleration);
+		ship.AddForce (Vector3.forward * speed, ForceMode.VelocityChange);
 		particleObject.SetActive(true);
 	}
 
