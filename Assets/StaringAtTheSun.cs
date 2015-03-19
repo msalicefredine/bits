@@ -37,6 +37,7 @@ public class StaringAtTheSun : MonoBehaviour {
 			bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
 			GetComponent<Renderer>().material.color = isLookedAt ? Color.white : Color.blue;
 			if (isLookedAt) {
+			if(fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha <= 1)
 			fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha += 0.004f;
 				i++;
 				
@@ -44,6 +45,8 @@ public class StaringAtTheSun : MonoBehaviour {
 					Application.LoadLevel (GameState.currentLevel);
 				}
 			} else {
+			if(fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha >= 0)
+			fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha -= 0.008f;
 			if (i > 0)
 				i--;
 			}
