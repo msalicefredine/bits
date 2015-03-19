@@ -1848,7 +1848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 1784162805}
-  speed: 1000
+  speed: 100
   scoreText: {fileID: 1942684533}
   next: {fileID: 479415448}
   particleObject: {fileID: 1240043718}
