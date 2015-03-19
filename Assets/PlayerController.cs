@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour {
 		intro.Play ();
 		notePlayer = notePlayerObject.GetComponent<AudioSource> ();
 		fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha = 1;
+		GameState.currentLevel++;
 	}
 
 	void SequenceBuilder(){
@@ -129,7 +130,6 @@ public class PlayerController : MonoBehaviour {
 		if(!outro.isPlaying)
 		outro.Play ();
 		yield return new WaitForSeconds (5);
-		GameState.currentLevel++;
 		SequenceBuilder ();
 		Application.LoadLevel (GameState.currentLevel);
 	}
