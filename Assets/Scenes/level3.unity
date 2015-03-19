@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -982,6 +982,18 @@ Prefab:
     - target: {fileID: 11410096, guid: aa59800c280034d2fb82ad2148912260, type: 2}
       propertyPath: speed
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446140, guid: aa59800c280034d2fb82ad2148912260, type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446140, guid: aa59800c280034d2fb82ad2148912260, type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446140, guid: aa59800c280034d2fb82ad2148912260, type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa59800c280034d2fb82ad2148912260, type: 2}
