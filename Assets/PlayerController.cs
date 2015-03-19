@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
 
 
 	private bool isAccelerating;
-	private float maxVelocity = 100;
+	private float maxVelocity = 75;
 	private int currentSequenceIndex;
 	private string currentSequence;
 
@@ -43,7 +43,8 @@ public class PlayerController : MonoBehaviour {
 		SequenceBuilder ();
 		intro.Play ();
 		notePlayer = notePlayerObject.GetComponent<AudioSource> ();
-		fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha = 0;
+		fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha = 1;
+		GameState.currentLevel++;
 	}
 
 	void SequenceBuilder(){
@@ -129,20 +130,14 @@ public class PlayerController : MonoBehaviour {
 		if(!outro.isPlaying)
 		outro.Play ();
 		yield return new WaitForSeconds (5);
-		GameState.currentLevel++;
 		SequenceBuilder ();
 		Application.LoadLevel (GameState.currentLevel);
 	}
 
-	void FadeIn ()
-	{
-		//if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha > 0)
-		//	fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha -= 0.004f;
-	}
+
 
 	// Update is called once per frame
 	void Update () {
-		FadeIn ();
 		if (sequence [currentSequenceIndex].Equals ("finished")) {
 			StartCoroutine(LevelIsFinished ());
 		}
