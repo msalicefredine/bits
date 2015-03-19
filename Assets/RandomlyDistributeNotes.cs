@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class RandomlyDistributeNotes : MonoBehaviour {
+	private int minDistance;
 	
 		// Use this for initialization
 		void Start () {
+		minDistance = 5;
 			
 			foreach (Transform child in transform)
 			{
@@ -20,9 +22,29 @@ public class RandomlyDistributeNotes : MonoBehaviour {
 
 		void RandomTransform(Transform eachTransform) {
 		int i = GetBoundaries ();
-		int x = Random.Range (-i, i);
-		int y = Random.Range (-i, i);
-		int z = Random.Range (-i, i);
+
+	
+		int xneg = Random.Range (-i, -minDistance);
+		int xpos = Random.Range (minDistance, i);
+		int[] selectionx = {xneg, xpos};
+		int selectorx = (xneg % 2 == 0) ? 1 : 0;
+		int x = selectionx [selectorx];
+
+		int yneg = Random.Range (-i, -minDistance);
+		int ypos = Random.Range (minDistance, i);
+		int[] selectiony = {yneg, ypos};
+		int selectory = (yneg % 2 == 0) ? 1 : 0;
+		int y = selectiony [selectory];
+
+		int zneg = Random.Range (-i, -minDistance);
+		int zpos = Random.Range (minDistance, i);
+		int[] selectionz = {zneg, zpos};
+		int selectorz = (zneg % 2 == 0) ? 1 : 0;
+		int z = selectionz [selectorz];
+
+		//int x = Random.Range (-i, i);
+		//int y = Random.Range (-i, i);
+		//int z = Random.Range (-i, i);
 			
 			Vector3 trans = new Vector3 (x, y, z);
 			
@@ -39,6 +61,6 @@ public class RandomlyDistributeNotes : MonoBehaviour {
 		else if (GameState.currentLevel == 3 || GameState.currentLevel == 4)
 			return 30;
 		else
-			return 40;
+			return 35;
 	}
 	}
