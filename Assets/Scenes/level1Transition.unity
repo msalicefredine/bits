@@ -282,6 +282,7 @@ GameObject:
   - 114: {fileID: 138437361}
   - 45: {fileID: 138437360}
   - 114: {fileID: 138437366}
+  - 114: {fileID: 138437367}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -424,6 +425,19 @@ MonoBehaviour:
   next: {fileID: 474290495}
   particleObject: {fileID: 187805217}
   engineCharge: {fileID: 809796917}
+--- !u!114 &138437367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138437357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1578549c7fcc4f6fa1b063992091672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  updateEarly: 0
 --- !u!1 &187805217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,12 +1083,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 474290494}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b43a8b3882a549959a268556b9664b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 2
 --- !u!65 &474290499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2599,8 +2613,6 @@ GameObject:
   - 4: {fileID: 1555198476}
   - 33: {fileID: 1555198482}
   - 65: {fileID: 1555198481}
-  - 114: {fileID: 1555198480}
-  - 114: {fileID: 1555198479}
   - 54: {fileID: 1555198478}
   - 114: {fileID: 1555198477}
   m_Layer: 0
@@ -2715,42 +2727,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &1555198479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11498472, guid: aa7f97ae3fc52b24dbd1fdf5ffb2085f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1555198475}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1578549c7fcc4f6fa1b063992091672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  updateEarly: 0
---- !u!114 &1555198480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11498474, guid: aa7f97ae3fc52b24dbd1fdf5ffb2085f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1555198475}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d2d2443fd0942a19a13b300564b673, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  camera: {fileID: 138437358}
-  text: {fileID: 0}
-  sequence: []
-  shipBody: {fileID: 1555198478}
-  particleObject: {fileID: 187805217}
-  notePlayerObject: {fileID: 1525476490}
-  glowParentObject: {fileID: 210572351}
-  noteParentObject: {fileID: 0}
-  fadeToWhiteCanvas: {fileID: 1923236268}
 --- !u!65 &1555198481
 BoxCollider:
   m_ObjectHideFlags: 0
