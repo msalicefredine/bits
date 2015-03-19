@@ -1021,8 +1021,8 @@ TextMesh:
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 1
-  m_Alignment: 0
+  m_Anchor: 0
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 25
   m_FontStyle: 0
@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b43a8b3882a549959a268556b9664b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
+  level: 0
 --- !u!65 &474290499
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2603,7 +2603,6 @@ GameObject:
   - 114: {fileID: 1555198479}
   - 54: {fileID: 1555198478}
   - 114: {fileID: 1555198477}
-  - 114: {fileID: 1555198483}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -2773,18 +2772,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1555198475}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1555198483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1555198475}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b6a7009d3f424f0c81b053eca20b244, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleObject: {fileID: 809796917}
 --- !u!1 &1561212484
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,8 +3228,8 @@ TextMesh:
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 1
-  m_Alignment: 0
+  m_Anchor: 0
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 35
   m_FontStyle: 0
@@ -3278,7 +3265,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1929834742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.2000008, y: 8.30000019, z: 29.8999996}
+  m_LocalPosition: {x: -16.2000008, y: 14, z: 29.8999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
