@@ -19,7 +19,7 @@ using System.Collections;
 public class Menu : MonoBehaviour {
 	private CardboardHead head;
 	private Vector3 startingPosition;
-	public string level;
+	public int level;
 	private int i;
 	private float r;
 	private float g;
@@ -45,8 +45,7 @@ public class Menu : MonoBehaviour {
 			}
 
 			if (i > 100) {
-				GameState.currentLevel++;
-				Application.LoadLevel (GameState.currentLevel);
+				Application.LoadLevel (level);
 			}
 		} 
 		else {

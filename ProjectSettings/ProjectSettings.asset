@@ -11,8 +11,8 @@ PlayerSettings:
   targetIOSGraphics: -1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: bits-please-4.6.3
+  companyName: Bits Please
+  productName: StarSong
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -68,7 +68,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.test.ProductName
+  iPhoneBundleIdentifier: com.BitsPlease.StarSong
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 6b9ef35253d834f0d9532cf42f853c7f
@@ -93,7 +93,7 @@ PlayerSettings:
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
-  iPhoneSplashScreen: {fileID: 0}
+  iPhoneSplashScreen: {fileID: 2800000, guid: bb7adcac3c87942f18568572e1e6ccc2, type: 3}
   iPhoneHighResSplashScreen: {fileID: 0}
   iPhoneTallHighResSplashScreen: {fileID: 0}
   iPhone47inSplashScreen: {fileID: 0}
@@ -120,8 +120,22 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: 003cf007afef64aea9f798b3a8c000d4, type: 3}
       m_Size: 128
+  - m_BuildTarget: Android
+    m_Icons:
+    - m_Icon: {fileID: 2800000, guid: 003cf007afef64aea9f798b3a8c000d4, type: 3}
+      m_Size: 192
+    - m_Icon: {fileID: 0}
+      m_Size: 144
+    - m_Icon: {fileID: 0}
+      m_Size: 96
+    - m_Icon: {fileID: 0}
+      m_Size: 72
+    - m_Icon: {fileID: 0}
+      m_Size: 48
+    - m_Icon: {fileID: 0}
+      m_Size: 36
   m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
