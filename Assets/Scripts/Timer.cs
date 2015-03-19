@@ -31,6 +31,11 @@ public class Timer : MonoBehaviour {
 		if (levelTime <= 0) {
 			// end level, display menu to restart etc.
 		}*/
+		int minutes = (int) GameState.currentTime / 60; 
+		int seconds = (int) GameState.currentTime % 60; 
+		
+		GameState.levelTime = String.Format ("{0:00}:{1:00}", minutes, seconds); 
+
 	
 	}
 

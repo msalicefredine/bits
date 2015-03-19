@@ -1,20 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameState : MonoBehaviour {
+public class ChargeEngine : MonoBehaviour {
 
-	public static int currentLevel = 0;
-	public static float currentTime = 0f;
-	public static string levelTime = "";
+	public GameObject particleObject;
 
 	// Use this for initialization
 	void Start () {
+		particleObject.SetActive (true);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-
-
 }
