@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿	using UnityEngine;
 using System.Collections;
 
 public class TransitionScript : MonoBehaviour {
@@ -11,6 +11,8 @@ public class TransitionScript : MonoBehaviour {
 	public GameObject engineCharge;
 	public Light light;
 	public Canvas fadeToWhiteCanvas;
+	private bool loading;
+
 
 	// Use this for initialization
 	void Start () {
@@ -21,40 +23,47 @@ public class TransitionScript : MonoBehaviour {
 		StartCoroutine ("warmUp");
 		light.intensity = 0;
 		fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha = 1;
-
+		loading = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+	
+		this.transform.rotation = Quaternion.identity;
 		light.intensity += 0.05f;
-		if(fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha >= 0)
-		fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha -= 0.025f;
+		if (!loading) {
+			if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha >= 0)
+				fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha -= 0.025f;
+		}
+
+		if (loading) {
+			if(fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha <= 1)
+				fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha += 0.025f;
+			if(fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha >= 1) {
+				GameState.currentLevel++;
+				Application.LoadLevel (GameState.currentLevel);
+			}
+		}
+
 	
 	}
 
 	void runShip() {
-		// Ship blasts off: apply force and start particle stuff
 		ship.AddForce (Vector3.forward * speed, ForceMode.VelocityChange);
-		//particleObject.SetActive(true);
 	}
 
 	void runButtons() {
 		
 		scoreText.text = "Your Time:\n" + GameState.levelTime;
-		next.text = "Next Level";
+		next.text = "Loading...";
 
 		int i = 0;
+	}
 
-		float r = scoreText.color.r;
-		float g = scoreText.color.g;
-		float b = scoreText.color.b;
+	void loadNextLevel() {
 
-		while (i < 255) {
-			scoreText.GetComponent<Renderer>().material.color = new Color(r, g, b, i);
-			next.GetComponent<Renderer>().material.color = new Color(r, g, b, i);
-			                                
-			i++;
-		}
+
+		Application.LoadLevel (GameState.currentLevel);
 	}
 
 	IEnumerator warmUp() {
@@ -62,8 +71,12 @@ public class TransitionScript : MonoBehaviour {
 		GetComponent<AudioSource> ().Play ();
 		yield return new WaitForSeconds(2.3f);
 		runShip ();
-		yield return new WaitForSeconds (1.0f);
+		yield return new WaitForSeconds (2.0f);
 		runButtons ();
+		yield return new WaitForSeconds (3.0f);
+		loading = true;
+
+
 
 	}
 }

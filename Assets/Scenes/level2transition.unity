@@ -2490,7 +2490,6 @@ GameObject:
   - 23: {fileID: 946760479}
   - 102: {fileID: 946760478}
   - 65: {fileID: 946760477}
-  - 114: {fileID: 946760476}
   m_Layer: 0
   m_Name: NextLevel
   m_TagString: Untagged
@@ -2498,18 +2497,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &946760476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 946760475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b43a8b3882a549959a268556b9664b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: 5
 --- !u!65 &946760477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4034,7 +4021,6 @@ GameObject:
   - 114: {fileID: 1869902708}
   - 45: {fileID: 1869902707}
   - 114: {fileID: 1869902706}
-  - 114: {fileID: 1869902713}
   - 82: {fileID: 1869902715}
   - 82: {fileID: 1869902714}
   m_Layer: 0
@@ -4181,19 +4167,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1869902703}
   m_Enabled: 1
---- !u!114 &1869902713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1869902703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1578549c7fcc4f6fa1b063992091672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  updateEarly: 0
 --- !u!82 &1869902714
 AudioSource:
   m_ObjectHideFlags: 0
