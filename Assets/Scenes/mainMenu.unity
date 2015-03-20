@@ -595,7 +595,6 @@ GameObject:
   - 102: {fileID: 749136365}
   - 65: {fileID: 749136364}
   - 114: {fileID: 749136363}
-  - 114: {fileID: 749136368}
   m_Layer: 0
   m_Name: How to Play
   m_TagString: Untagged
@@ -684,17 +683,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1304045804}
   m_RootOrder: 1
---- !u!114 &749136368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 749136362}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 076727406bdef45be968a4d02ea44115, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &847226264
 GameObject:
   m_ObjectHideFlags: 0
