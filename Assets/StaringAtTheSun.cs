@@ -32,15 +32,15 @@ public class StaringAtTheSun : MonoBehaviour {
 		}
 		
 		void Update() {
-
+		if (!GameState.isLevelOver) {
 			RaycastHit hit;
-			bool isLookedAt = GetComponent<Collider>().Raycast(head.Gaze, out hit, Mathf.Infinity);
-			GetComponent<Renderer>().material.color = isLookedAt ? Color.white : Color.blue;
+			bool isLookedAt = GetComponent<Collider> ().Raycast (head.Gaze, out hit, Mathf.Infinity);
+			GetComponent<Renderer> ().material.color = isLookedAt ? Color.white : Color.blue;
 			if (isLookedAt) {
-			if(fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha <= 0.90f)
-			fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha += 0.008f;
-			else if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha <= 1)
-				fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha = 1;
+				if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha <= 0.90f)
+					fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha += 0.008f;
+				else if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha <= 1)
+					fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha = 1;
 				i++;
 				
 				if (i > 150) {
@@ -48,13 +48,14 @@ public class StaringAtTheSun : MonoBehaviour {
 					Application.LoadLevel (GameState.currentLevel);
 				}
 			} else {
-			if(fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha >= 0)
-			fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha -= 0.008f;
-			if (i > 0)
-				i--;
+				if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha >= 0)
+					fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha -= 0.008f;
+				if (i > 0)
+					i--;
 			}
 
 		}
+	}
 		
 		IEnumerator MyLoadLevel(float delay, string toLoad) {
 			yield return new WaitForSeconds (delay);

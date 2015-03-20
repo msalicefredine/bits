@@ -45,6 +45,7 @@ public class Menu : MonoBehaviour {
 			}
 
 			if (i > 100) {
+				GameState.currentLevel = level;
 				Application.LoadLevel (level);
 			}
 		} 

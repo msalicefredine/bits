@@ -10,13 +10,23 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level1.unity
   - enabled: 1
+    path: Assets/Scenes/level1Transition.unity
+  - enabled: 1
     path: Assets/Scenes/level2.unity
+  - enabled: 1
+    path: Assets/Scenes/level2transition.unity
   - enabled: 1
     path: Assets/Scenes/level3.unity
   - enabled: 1
+    path: Assets/Scenes/level3transition.unity
+  - enabled: 1
     path: Assets/Scenes/level4.unity
   - enabled: 1
+    path: Assets/Scenes/level4transition.unity
+  - enabled: 1
     path: Assets/Scenes/level5.unity
+  - enabled: 1
+    path: Assets/Scenes/level5transition.unity
   - enabled: 1
     path: Assets/Scenes/Credits.unity
   - enabled: 1

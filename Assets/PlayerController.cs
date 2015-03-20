@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour {
 		notePlayer = notePlayerObject.GetComponent<AudioSource> ();
 		fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha = 1;
 		GameState.currentLevel++;
+		GameState.isLevelOver = false;
 	}
 
 	void SequenceBuilder(){
@@ -54,22 +55,22 @@ public class PlayerController : MonoBehaviour {
 		sequence [2] = "third";
 		if (GameState.currentLevel == 1)
 			sequence [3] = "finished";
-		else if (GameState.currentLevel == 2) {
+		else if (GameState.currentLevel == 3) {
 			sequence [3] = "fourth";
 			sequence [4] = "finished";
 		}
-		else if(GameState.currentLevel == 3){
+		else if(GameState.currentLevel == 5){
 			sequence [3] = "fourth";
 		sequence [4] = "fifth";
 		sequence [5] = "finished";
 		}
-		else if(GameState.currentLevel == 4){
+		else if(GameState.currentLevel == 7){
 			sequence [3] = "fourth";
 		sequence [4] = "fifth";
 		sequence [5] = "sixth";
 		sequence [6] = "finished";
 		}
-		else if(GameState.currentLevel == 5){
+		else if(GameState.currentLevel == 9){
 			sequence [3] = "fourth";
 		sequence [4] = "fifth";
 		sequence [5] = "sixth";
@@ -126,42 +127,52 @@ public class PlayerController : MonoBehaviour {
 	
 	}
 
-	IEnumerator LevelIsFinished (){
-		if(!outro.isPlaying)
-		outro.Play ();
-		yield return new WaitForSeconds (5);
-		SequenceBuilder ();
-		Application.LoadLevel (GameState.currentLevel);
-	}
+	//IEnumerator LevelIsFinished (){
+	//	yield return new WaitForSeconds (5);
+		//SequenceBuilder ();
+		//Application.LoadLevel (GameState.currentLevel);
+	//}	
 
 
 
 	// Update is called once per frame
 	void Update () {
-		if (sequence [currentSequenceIndex].Equals ("finished")) {
-			StartCoroutine(LevelIsFinished ());
+		if (GameState.isLevelOver) {
+			if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha != 1)
+				fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha += 0.008f;
+			if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha == 1){
+				//StartCoroutine (LevelIsFinished ());
+		SequenceBuilder ();
+		Application.LoadLevel (GameState.currentLevel);
 		}
-		if(shipBody.velocity.sqrMagnitude > maxVelocity)
-		{
-			shipBody.velocity *= 0.99f;
-		}
-
-
-		if (Cardboard.SDK.CardboardTriggered) {
-			isAccelerating = !isAccelerating;
-			particleObject.SetActive(isAccelerating);
+		} else {
+			if (sequence [currentSequenceIndex].Equals ("finished")) {
+				//if (!outro.isPlaying)
+				//	outro.Play ();
+				GameState.isLevelOver = true;
+				//StartCoroutine(LevelIsFinished ());
+			}
+			if (shipBody.velocity.sqrMagnitude > maxVelocity) {
+				shipBody.velocity *= 0.99f;
 			}
 
-		if (isAccelerating) {
-			if(shipBody.velocity.sqrMagnitude < maxVelocity)
-			shipBody.AddForce (camera.transform.forward * speed, ForceMode.Acceleration);
-			shipBody.drag = 0;
-			if(!thrusters.isPlaying)
-			thrusters.Play();
-		} else {
-			isAccelerating = false;
-			shipBody.drag = 1f;
-			thrusters.Stop();
+
+			if (Cardboard.SDK.CardboardTriggered) {
+				isAccelerating = !isAccelerating;
+				particleObject.SetActive (isAccelerating);
+			}
+
+			if (isAccelerating) {
+				if (shipBody.velocity.sqrMagnitude < maxVelocity)
+					shipBody.AddForce (camera.transform.forward * speed, ForceMode.Acceleration);
+				shipBody.drag = 0;
+				if (!thrusters.isPlaying)
+					thrusters.Play ();
+			} else {
+				isAccelerating = false;
+				shipBody.drag = 1f;
+				thrusters.Stop ();
+			}
 		}
 	}
 }
