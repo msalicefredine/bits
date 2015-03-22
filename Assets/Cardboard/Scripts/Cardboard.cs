@@ -123,7 +123,7 @@ public class Cardboard : MonoBehaviour {
 
   [SerializeField]
   [HideInInspector]
-  private bool tapIsTrigger = false;
+  private bool tapIsTrigger = true;
 
   // Whether the back button exits the application.
   public bool BackButtonExitsApp {
