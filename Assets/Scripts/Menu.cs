@@ -30,8 +30,8 @@ public class Menu : MonoBehaviour {
 		startingPosition = transform.localPosition;
 		CardboardGUI.IsGUIVisible = true;
 		CardboardGUI.onGUICallback += this.OnGUI;
-		r = 0.6f;
-		g = 0.6f;
+		r = 0.5f;
+		g = 0.5f;
 	}
 	
 	void Update() {
@@ -41,7 +41,7 @@ public class Menu : MonoBehaviour {
 			print ("looking at text");
 			i++;
 			if ((i % 10) == 0) {
-				GetComponent<Renderer>().material.color = new Color(r += 0.05f,g += 0.05f, 255);
+				GetComponent<Renderer>().material.color = new Color(255 ,g += 0.05f, r += 0.05f);
 			}
 
 			if (i > 100) {
@@ -51,8 +51,8 @@ public class Menu : MonoBehaviour {
 		} 
 		else {
 			i = 0;
-			r = 0.6f;
-			g = 0.6f;
+			r = 0.5f;
+			g = 0.5f;
 			GetComponent<Renderer>().material.color = new Color(0.5f, 0.5f, 1.0f);
 		}
 		if (Cardboard.SDK.CardboardTriggered && isLookedAt) {
