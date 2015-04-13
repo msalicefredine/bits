@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
 	public string[] sequence;
 	public Rigidbody shipBody;
 	public GameObject particleObject;
-
+	
 
 	private bool isAccelerating;
 	private float maxVelocity = 75;
@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour {
 	public GameObject notePlayerObject;
 	public GameObject glowParentObject;
 	public GameObject noteParentObject;
+	public GameObject pauseText;
+	public GameObject ambientSound;
+	public GameObject otherSounds;
 
 	private AudioSource notePlayer;
 	private AudioSource impact;
@@ -34,6 +37,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Start () {
 		sequence = new string[10];
+		GameState.isPaused = false;
 		isAccelerating = false;
 		impact = GameObject.FindGameObjectWithTag ("collision").GetComponent<AudioSource> ();
 		thrusters = GameObject.FindGameObjectWithTag ("thruster").GetComponent<AudioSource> ();
@@ -126,36 +130,52 @@ public class PlayerController : MonoBehaviour {
 		}
 	
 	}
-
-	//IEnumerator LevelIsFinished (){
-	//	yield return new WaitForSeconds (5);
-		//SequenceBuilder ();
-		//Application.LoadLevel (GameState.currentLevel);
-	//}	
-
-
+	
 
 	// Update is called once per frame
 	void Update () {
 		if (GameState.isLevelOver) {
 			if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha != 1)
 				fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha += 0.008f;
-			if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha == 1){
+			if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha == 1) {
 				//StartCoroutine (LevelIsFinished ());
-		SequenceBuilder ();
-		Application.LoadLevel (GameState.currentLevel);
+				SequenceBuilder ();
+				Application.LoadLevel (GameState.currentLevel);
+			}
+		} else if (GameState.isPaused == true) {
+
+			if (Input.GetKey(KeyCode.Escape)){
+				Time.timeScale = 1;
+				GameState.currentLevel = 1;
+				GameState.isPaused = false;
+				Application.LoadLevel (0);
+			}
+
+			if (Cardboard.SDK.CardboardTriggered) {
+				GameState.isPaused = false;
+				Time.timeScale = 1;
+				ambientSound.SetActive(true);
+				otherSounds.SetActive(true);
+				pauseText.SetActive(false);
+			}
+
 		}
-		} else {
+
+		else{
 			if (sequence [currentSequenceIndex].Equals ("finished")) {
-				//if (!outro.isPlaying)
-				//	outro.Play ();
 				GameState.isLevelOver = true;
-				//StartCoroutine(LevelIsFinished ());
 			}
 			if (shipBody.velocity.sqrMagnitude > maxVelocity) {
 				shipBody.velocity *= 0.99f;
 			}
 
+			if (Input.GetKey(KeyCode.Escape)){
+				ambientSound.SetActive(false);
+				otherSounds.SetActive(false);
+				GameState.isPaused = true;
+				pauseText.SetActive(true);
+				Time.timeScale = 0;
+			}
 
 			if (Cardboard.SDK.CardboardTriggered) {
 				isAccelerating = !isAccelerating;

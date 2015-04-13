@@ -28,6 +28,7 @@ public class CardboardHead : MonoBehaviour {
 
   // Where is this head looking?
   public Ray Gaze {
+
     get {
       UpdateHead();
       return new Ray(transform.position, transform.forward);
@@ -50,19 +51,25 @@ public class CardboardHead : MonoBehaviour {
 
   // Compute new head pose.
   private void UpdateHead() {
-    if (updated) {  // Only one update per frame, please.
-      return;
-    }
-    updated = true;
-    if (!Cardboard.SDK.UpdateState()) {
-      return;
-    }
+		if (GameState.isPaused == false) {
+		if (updated) {  // Only one update per frame, please.
+			return;
+		}
+		updated = true;
+		if (!Cardboard.SDK.UpdateState ()) {
+			return;
+		}
 
-    var rot = Cardboard.SDK.HeadRotation;
-    if (target == null) {
-      transform.localRotation = rot;
-    } else {
-      transform.rotation = rot * target.rotation;
-    }
-  }
+
+			var rot = Cardboard.SDK.HeadRotation;
+
+
+			if (target == null) {
+				transform.localRotation = rot;
+			} else {
+				transform.rotation = rot * target.rotation;
+
+			}
+		}
+	}
 }

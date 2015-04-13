@@ -48,7 +48,7 @@ public class StaringAtTheSun : MonoBehaviour {
 					Application.LoadLevel (GameState.currentLevel);
 				}
 			} else {
-				if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha >= 0)
+				if (fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha >= 0 && GameState.isPaused == false)
 					fadeToWhiteCanvas.GetComponent<CanvasGroup> ().alpha -= 0.008f;
 				if (i > 0)
 					i--;

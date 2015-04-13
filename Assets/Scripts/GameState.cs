@@ -7,6 +7,7 @@ public class GameState : MonoBehaviour {
 	public static float currentTime = 0f;
 	public static string levelTime = "";
 	public static bool isLevelOver = false;
+	public static bool isPaused = false;
 
 	// Use this for initialization
 	void Start () {
