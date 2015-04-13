@@ -10,10 +10,10 @@ function Update () {
     var offsetY = Time.time * scrollSpeedY%1;
     var offset2X = Time.time * scrollSpeedXMaterial2%1;
     var offset2Y = Time.time * scrollSpeedYMaterial2%1;
-    renderer.material.SetTextureOffset ("_BumpMap", Vector2(offsetX,offsetY));
-    renderer.material.SetTextureOffset ("_MainTex", Vector2(offsetX,offsetY));
-    if(renderer.materials.Length>1){
-   		 renderer.materials[1].SetTextureOffset ("_MainTex", Vector2(offset2X,offset2Y));
-  		 renderer.materials[1].SetTextureOffset ("_BumpMap", Vector2(offset2X,offset2Y));
+    GetComponent.<Renderer>().material.SetTextureOffset ("_BumpMap", Vector2(offsetX,offsetY));
+    GetComponent.<Renderer>().material.SetTextureOffset ("_MainTex", Vector2(offsetX,offsetY));
+    if(GetComponent.<Renderer>().materials.Length>1){
+   		 GetComponent.<Renderer>().materials[1].SetTextureOffset ("_MainTex", Vector2(offset2X,offset2Y));
+  		 GetComponent.<Renderer>().materials[1].SetTextureOffset ("_BumpMap", Vector2(offset2X,offset2Y));
     }
 }

@@ -55,7 +55,7 @@ public class InfiniteStarfield : MonoBehaviour {
 		
 		
 		
-		particleSystem.SetParticles ( points, points.Length );
+		GetComponent<ParticleSystem>().SetParticles ( points, points.Length );
 		
 	}
 }

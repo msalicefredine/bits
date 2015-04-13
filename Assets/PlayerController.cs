@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour {
 			}
 		} else if (GameState.isPaused == true) {
 
-			if (Input.GetKey(KeyCode.Escape)){
+			if (Input.GetKeyDown(KeyCode.Escape)){
 				Time.timeScale = 1;
 				GameState.currentLevel = 1;
 				GameState.isPaused = false;
@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour {
 				shipBody.velocity *= 0.99f;
 			}
 
-			if (Input.GetKey(KeyCode.Escape)){
+			if (Input.GetKeyDown(KeyCode.Escape)){
 				ambientSound.SetActive(false);
 				otherSounds.SetActive(false);
 				GameState.isPaused = true;
